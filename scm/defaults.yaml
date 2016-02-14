@@ -1,0 +1,4 @@
+scm:
+  config:
+    http_port: 8080
+    request_header_size: 32768

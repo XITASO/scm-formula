@@ -1,0 +1,6 @@
+scm:
+  config:
+    ajp_port: 8009
+    http_port: 8080
+    # set forwarded to True, when scm-manager is behind a reverse proxy
+    forwarded: False

@@ -1,0 +1,7 @@
+{% from 'java/map.jinja' import java with context %}
+{% import_yaml 'scm/defaults.yaml' as default_settings %}
+{% set scm = salt['pillar.get']('scm', default=default_settings.get('scm'), merge=True) %}
+
+{% do scm.config.update({
+  'JAVA_HOME': java.jre8.home
+}) %}
