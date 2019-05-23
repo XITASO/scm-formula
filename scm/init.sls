@@ -11,6 +11,11 @@ scm-manager:
     - require:
       - pkgrepo: scm-manager-repo
 
+  module.wait:
+    - name: service.systemctl_reload
+    - watch:
+      - pkg: scm-manager
+
   service.running:
     - name: scm-server
     - enable: True
