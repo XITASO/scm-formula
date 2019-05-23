@@ -37,6 +37,6 @@ scm-manager-config:
     - group: root
     - template: jinja
     - defaults:
-        config: {{ scm.config }}
+        config: {{ scm.config|json }}
     - require:
       - pkg: scm-manager
